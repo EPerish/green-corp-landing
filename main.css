@@ -4,10 +4,12 @@ body {
 }
  
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  position: sticky;
+  top: 0;
+  background: white;
+}
+header {
+  z-index: 1;
 }
 .header__logo {
   height: 30px;
@@ -37,11 +39,13 @@ button {
 .about__image {
     width: 500px;
 }
-.about__sun-image {
-    width: 100px;
-    height: 100px;
+/* .about__sun-image {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+} */
     
-}
+
 .about {
     display: flex;
     justify-content: space-around;
@@ -94,6 +98,7 @@ button {
     opacity: 0.65;
     
   }
+  /* форма для ввода текста */
   .form__group {
     display: flex;
     flex-direction: column;
@@ -117,6 +122,17 @@ padding: 0 20px 0 20px;
 border-radius: 15px;
 border: none;
   }
+
+  .features {
+    background-color: white;
+    padding: 115px 60px;
+  }
+
+  /* @media (max-width: 720px) {
+    header {
+        padding: 10px;
+    } */
+
   input {
     outline: none;
   }
@@ -149,6 +165,7 @@ border: none;
     padding: 90px 20px 90px 20px;
     font-size: 16px;
     font-weight: 600;
+  
   }
 
   .footer__copyright {
@@ -177,9 +194,92 @@ border: none;
 .about__image {
   position: absolute;
 }
-  /* @keyframes about__sun-image { */
-    /* 0% {transform: scale(1);}
-    33% {transform: scale(1.1);}
-    66% {transform: scale(0.9);}
-    100% {transform: scale(1);}
-} */
+@keyframes rotation {
+  0% {
+      transform: rotate(0);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.about__sun-image {
+  width: 100px;
+  height: 100px;
+  animation: rotation 10s infinite linear;
+}
+
+@media (max-width: 1024px) {
+  .about {
+      padding: 115px 20px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 720px) {
+  header {
+      padding: 10px;
+  }
+
+  .header__logo {
+      height: 20px;
+  }
+
+  header a {
+      margin-right: 10px;
+  }
+
+  .about {
+      flex-direction: column-reverse;
+      padding: 50px 10px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+
+  .form {
+      padding: 50px 10px;
+  }
+
+  .form h1 {
+      font-size: 36px;
+  }
+
+  footer {
+      padding: 50px 10px;
+  }
+
+  .footer__container {
+      flex-direction: column;
+  }
+}
+
+.card {
+  display: grid;
+}
