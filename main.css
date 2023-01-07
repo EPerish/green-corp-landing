@@ -2,15 +2,17 @@ body {
   font-family: 'Raleway', sans-serif;
   color: #213053;
 }
- 
 header {
-  position: sticky;
-  top: 0;
-  background: white;
-}
-header {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    top: 0;
+    background: white;
   z-index: 1;
-}
+  }
+ 
 .header__logo {
   height: 30px;
 }
@@ -38,12 +40,13 @@ button {
 
 .about__image {
     width: 500px;
+    position:relative;
 }
-/* .about__sun-image {
+.about__sun-image {
   width: 100px;
   height: 100px;
   position: absolute;
-} */
+}
 
 
 .orb-canvas {
@@ -162,11 +165,7 @@ border: none;
   }
 
   
-  header {
-    position: sticky;
-    background-color: #fff;
-    top: 0;
-  }
+ 
 
 
   .footer {
@@ -199,9 +198,7 @@ border: none;
     opacity: 0.7;
     margin-bottom: 30px;
   }
-.about__image {
-  position: absolute;
-}
+
 @keyframes rotation {
   0% {
       transform: rotate(0);
