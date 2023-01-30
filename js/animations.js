@@ -21,8 +21,8 @@ function initIncreaseNumberAnimation() {
   
   increaseNumberAnimationStep(0, element, 5000);
 }
+initIncreaseNumberAnimation();
 
-initIncreaseNumberAnimation()
 
 document.querySelector('#budget').addEventListener('change', function handleSelectChange(event) {
   if (event.target.value === 'other') {
